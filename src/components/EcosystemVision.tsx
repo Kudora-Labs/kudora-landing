@@ -174,13 +174,16 @@ function InteractiveVisualization() {
   }, [isMobile]);
 
   // Fixed large planets with different colors
+  // Scale factor for mobile: reduce planet sizes by 50%
+  const sizeScale = isMobile ? 0.5 : 1;
+
   const fixedPlanets = useMemo(
     () => [
       {
         id: "planet-1",
         left: 15,
         top: 25,
-        size: 35,
+        size: 35 * sizeScale,
         label: "Nova",
         link: "https://kudora.org",
         gradient: "from-purple-500 to-indigo-600",
@@ -190,7 +193,7 @@ function InteractiveVisualization() {
         id: "planet-2",
         left: 75,
         top: 20,
-        size: 25,
+        size: 25 * sizeScale,
         label: "Pulse",
         link: "https://kudora.org/white-paper/",
         gradient: "from-teal-400 to-emerald-500",
@@ -200,7 +203,7 @@ function InteractiveVisualization() {
         id: "planet-3",
         left: 85,
         top: 65,
-        size: 45,
+        size: 45 * sizeScale,
         label: "Astra",
         link: "https://github.com/Kudora-Labs",
         gradient: "from-blue-400 to-cyan-500",
@@ -210,7 +213,7 @@ function InteractiveVisualization() {
         id: "planet-4",
         left: 10,
         top: 70,
-        size: 20,
+        size: 20 * sizeScale,
         label: "Lumen",
         link: "https://kudora.org/builders-manifesto/",
         gradient: "from-pink-400 to-rose-500",
@@ -220,14 +223,14 @@ function InteractiveVisualization() {
         id: "planet-5",
         left: 60,
         top: 80,
-        size: 30,
+        size: 30 * sizeScale,
         label: "Core",
         link: "https://docs.kudora.io",
         gradient: "from-amber-400 to-orange-500",
         glowColor: "rgba(251, 191, 36, 0.6)",
       },
     ],
-    []
+    [sizeScale]
   );
 
   function handleMouseEnter(event: React.MouseEvent<HTMLDivElement>) {
@@ -274,7 +277,7 @@ function InteractiveVisualization() {
         style={{
           transformStyle: "preserve-3d",
         }}
-        className="aspect-video rounded-3xl bg-gradient-to-br from-purple-900/20 to-teal-900/20 border border-gray-700/50 overflow-hidden flex items-center justify-center transition-colors hover:border-teal-500/30"
+        className="aspect-[4/5] md:aspect-video rounded-3xl bg-gradient-to-br from-purple-900/20 to-teal-900/20 border border-gray-700/50 overflow-hidden flex items-center justify-center transition-colors hover:border-teal-500/30"
       >
         <div
           className="relative w-full h-full flex items-center justify-center"
