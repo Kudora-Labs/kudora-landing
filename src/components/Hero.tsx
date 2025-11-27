@@ -39,8 +39,10 @@ export function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="group px-8 py-4 bg-teal-600/10 hover:bg-teal-600/20 text-teal-300 border border-teal-500/30 rounded-lg font-semibold transition-all flex items-center gap-2">
+              <a href="https://github.com/Kudora-Labs" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Code2 className="w-5 h-5" />
               Start Building
+              </a>
             </button>
           </div>
         </motion.div>
