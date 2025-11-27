@@ -30,24 +30,31 @@ export function Header() {
               href="https://github.com/Kudora-Labs"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
+              aria-label="Kudora Labs on GitHub"
+              className="flex items-center gap-0 sm:gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
             >
               <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <span className="hidden sm:inline">GitHub</span>
             </a>
             <a
               href="https://kudora.org/white-paper/"
-              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Kudora Whitepaper"
+              className="flex items-center gap-0 sm:gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
             >
               <FileText className="w-4 h-4" />
-              <span>Whitepaper</span>
+              <span className="hidden sm:inline">Whitepaper</span>
             </a>
             <a
               href="https://github.com/Kudora-Labs"
-              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Kudora Documentation"
+              className="flex items-center gap-0 sm:gap-2 text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors"
             >
               <Book className="w-4 h-4" />
-              <span>Documentation</span>
+              <span className="hidden sm:inline">Documentation</span>
             </a>
           </nav>
         </div>
