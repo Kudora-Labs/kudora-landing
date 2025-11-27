@@ -3,21 +3,21 @@ import { socialLinks } from "../utils/socialUtils";
 export function Footer() {
   const links = {
     resources: [
-      { name: 'Documentation', href: '#' },
+      { name: 'Documentation', href: 'https://github.com/Kudora-Labs' },
       { name: 'Block Explorer', href: '#' },
       { name: 'GitHub', href: '#' },
       { name: 'Cosmos Directory', href: '#' },
     ],
     community: [
-      { name: 'Discord', href: '#' },
-      { name: 'Twitter', href: '#' },
+      { name: 'Discord', href: 'https://discord.gg/tRzeP4Cy' },
+      { name: 'Twitter', href: 'https://x.com/KudoraChain' },
       { name: 'Telegram', href: '#' },
-      { name: 'Forum', href: '#' },
+      { name: 'Forum', href: 'https://github.com/Kudora-Labs' },
     ],
     developers: [
-      { name: 'API Reference', href: '#' },
-      { name: 'Developer Tools', href: '#' },
-      { name: 'Tutorials', href: '#' },
+      { name: 'API Reference', href: 'https://github.com/Kudora-Labs' },
+      { name: 'Developer Tools', href: 'https://github.com/Kudora-Labs' },
+      { name: 'Tutorials', href: 'https://github.com/Kudora-Labs' },
       { name: 'Grant Programs', href: '#' },
     ],
     legal: [
