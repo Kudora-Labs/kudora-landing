@@ -225,7 +225,7 @@ function InteractiveVisualization() {
         top: 80,
         size: 30 * sizeScale,
         label: "Core",
-        link: "https://docs.kudora.io",
+        link: "https://cosmos.directory/kudora",
         gradient: "from-amber-400 to-orange-500",
         glowColor: "rgba(251, 191, 36, 0.6)",
       },
