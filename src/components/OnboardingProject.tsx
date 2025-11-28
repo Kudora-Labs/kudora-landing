@@ -58,11 +58,11 @@ function GifCard({
           >
             <X className="w-6 h-6 text-white" />
           </button>
-          <div className="w-full h-full flex items-center justify-center rotate-90 origin-center">
+          <div className="w-full h-full flex items-center justify-center p-4">
             <img
               src={src}
               alt={title}
-              className="max-w-[100vh] max-h-[100vw] w-auto h-auto object-contain"
+              className="max-w-full max-h-full w-auto h-auto object-contain"
             />
           </div>
           <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
@@ -110,9 +110,9 @@ export function OnboardingProject() {
             Onboarding Project
           </h2>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-gray-300">
-            Manage your projects efficiently using Kudora's
-            decentralized platform. Create tasks, collaborate with builders, and
-            track progress seamlessly.
+            Manage your projects efficiently using Kudora's decentralized
+            platform. Create tasks, collaborate with builders, and track
+            progress seamlessly.
           </p>
         </motion.div>
 
