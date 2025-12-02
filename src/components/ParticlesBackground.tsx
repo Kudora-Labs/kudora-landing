@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Container } from "@tsparticles/engine";
 
 export function ParticlesBackground() {
   const [init, setInit] = useState(false);
@@ -14,14 +13,6 @@ export function ParticlesBackground() {
     });
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      // Particles loaded successfully
-      console.log("Particles loaded", container);
-    },
-    []
-  );
-
   if (!init) {
     return null;
   }
@@ -29,17 +20,19 @@ export function ParticlesBackground() {
   return (
     <Particles
       id="tsparticles"
-      particlesLoaded={particlesLoaded}
       options={{
         background: {
           color: { value: "transparent" }
         },
-        fpsLimit: 60,
+        fpsLimit: 120,
+        smooth: true,
         particles: {
           number: {
             value: 50,
             density: {
-              enable: true
+              enable: true,
+              width: 1920,
+              height: 1080
             }
           },
           color: {
@@ -56,7 +49,8 @@ export function ParticlesBackground() {
             animation: {
               enable: true,
               speed: 1.5,
-              sync: false
+              sync: false,
+              startValue: "random"
             }
           },
           size: {
@@ -67,12 +61,13 @@ export function ParticlesBackground() {
             animation: {
               enable: true,
               speed: 3,
-              sync: false
+              sync: false,
+              startValue: "random"
             }
           },
           shadow: {
             enable: true,
-            blur: 15,
+            blur: 8,
             color: {
               value: "#8B5CF6"
             },
@@ -96,8 +91,11 @@ export function ParticlesBackground() {
             width: 1,
             shadow: {
               enable: true,
-              blur: 5,
+              blur: 3,
               color: "#8B5CF6"
+            },
+            triangles: {
+              enable: false
             }
           },
           move: {
@@ -115,29 +113,36 @@ export function ParticlesBackground() {
                 x: 600,
                 y: 1200
               }
-            }
-          }
+            },
+            decay: 0
+          },
+          reduceDuplicates: true
         },
         interactivity: {
-          detectsOn: "canvas",
+          detectsOn: "window",
           events: {
             onHover: {
               enable: true,
-              mode: "grab"
+              mode: "grab",
+              parallax: {
+                enable: false
+              }
             },
             onClick: {
               enable: true,
               mode: "push"
             },
             resize: {
-              enable: true
+              enable: true,
+              delay: 0.5
             }
           },
           modes: {
             grab: {
-              distance: 200,
+              distance: 140,
               links: {
-                opacity: 0.5
+                opacity: 0.4,
+                blink: false
               }
             },
             push: {
@@ -145,6 +150,9 @@ export function ParticlesBackground() {
             }
           }
         },
+        pauseOnBlur: true,
+        pauseOnOutsideViewport: true,
+        autoPlay: true,
         detectRetina: true
       }}
       style={{
