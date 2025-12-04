@@ -25,6 +25,7 @@ export function Header() {
               className="w-12 h-12 border-white border rounded-full"
               width="48"
               height="48"
+              fetchPriority="high"
             />
           </button>
 
